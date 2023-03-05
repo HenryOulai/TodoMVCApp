@@ -1,0 +1,279 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    font: 14px 'Helvetica Neue', Helvetica, Arial, sans-serif;
+   
+}
+
+html {
+    background-image: url('https://images.unsplash.com/photo-1518665750801-883c188a660d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80');
+    background-size:cover;
+    background-attachment: fixed;
+    color: #4d4d4d;
+}
+
+h1 {
+    font-size: 100px;
+    margin: 0 auto;
+    color: #edbfbf;
+}
+
+p {
+    font-size: 24px;
+}
+
+header {
+    text-align: center;
+    padding: 16px;
+    min-width: 230px;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+main, footer {
+    text-align: center;
+    min-width: 230px;
+    max-width: 550px;
+    margin: 0 auto;
+}
+
+main {
+    background-color: white;
+    border-radius: 1%;
+    box-shadow:  0 2px 4px 0 rgb(0 0 0 / 20%), 0 25px 20px 0 rgb(0 0 0 / 4%);
+}
+
+#input-form {
+    display: grid;
+    grid-template-columns: 82px auto;
+}
+
+#input-toggle {
+    margin: auto;
+    visibility: hidden;
+}
+
+input[type="checkbox" i] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    border: 1px solid #e6e6e6;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  input[type="checkbox" i]:checked {
+    background-color: #75e05a;
+  }
+  
+  input[type="checkbox" i]::before {
+    content: "\2713";
+    display: block;
+    color: #fff;
+    font-size: 20px;
+    line-height: 1;
+    text-align: center;
+    text-shadow: 1px 1px #666;
+    visibility: hidden;
+  }
+  
+  input[type="checkbox" i]:checked::before {
+    visibility: visible;
+  }
+  
+
+#input-form {
+    padding: 10px 0px;
+}
+
+#todoInput {
+    width: 100%;
+    float: right;
+    height: 50px;
+    border: none;
+}
+
+input::-webkit-input-placeholder {
+    font-size: 24px;
+    color: #e6e6e6;
+    line-height: 3;
+    font-style: italic;
+}
+
+input {
+    font-size: 24px;
+    line-height: 3;
+    padding-left: 2%;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+ul {
+    list-style-type: none;
+    display: block;
+    margin: 0;
+}
+
+li {
+    display: grid;
+    grid-template-columns: 82px auto 40px;
+    text-align: left;
+    border-top: 1px solid #ededed;
+    border-bottom: 1px solid #ededed;
+}
+
+#crossBtn-onclick {
+    opacity: 40%;
+    margin: auto;
+}
+
+#crossBtn-onclick:hover {
+    cursor: pointer;
+}
+
+#toggle-done {
+    margin: auto;
+}
+
+#todo-item {
+    margin-left: 12px;
+}
+
+#filter-option {
+    margin-top: 7px;
+}
+
+button {
+    width: max-content;
+    height: 20px;
+    margin: auto 3px;
+    color: #4d4d4d;
+    background-color: transparent;
+    border-color: transparent;
+    cursor: pointer;
+    margin-bottom: 2%;
+    border: 1px solid transparent;
+    border-radius: 5%;
+    padding: 0px 7px;
+}
+
+button:hover {
+    border: 1px solid #af2f2f33;
+    border-radius: 5%;
+}
+
+#counter {
+    float: left;
+    margin-left: 2%;
+    line-height: 1.5;
+    margin-right: 10px;
+}
+
+#clearCompleted {
+    float: right;
+    margin-right: 2%;
+}
+
+#clearCompleted:hover {
+    cursor: pointer;
+    text-decoration: underline;
+    border: 0.25px solid transparent;
+}
+
+.selected {
+    border: 1px solid #af2f2f33;
+    border-radius: 5%;
+    padding: 0px 7px;
+}
+
+.active {
+    color: #4d4d4d;
+    text-decoration: none;
+}
+
+.completed #todo-item{
+   color: #d9d9d9;
+   text-decoration: line-through;
+}
+
+.hide {
+    display: none;
+}
+
+small {
+    font-size: 10px;
+    
+    color: #9b9b9b;
+}
+
+a {
+    font-size: 10px;
+    
+    color: #9b9b9b;
+}
+
+a:visited {
+    
+    color: #9b9b9b;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+@media (max-width: 435px) {
+    input::-webkit-input-placeholder {
+        font-size: 18px;
+    }
+
+    input {
+        font-size: 18px;
+        padding-left: 0;
+    }
+
+    #todo-item {
+        font-size: 18px;
+        margin-left: 0px;
+    }
+
+    main, footer {
+        margin: 10px 40px;
+        min-width: 0;
+    }
+
+    #counter {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 500px) {
+    input::-webkit-input-placeholder {
+        font-size: 20px;
+    }
+
+    input {
+        font-size: 20px;
+        padding-left: 0;
+    }
+
+    #todo-item {
+        font-size: 20px;
+        margin-left: 0px;
+    }
+
+    #clearCompleted {
+        float: none;
+    }
+}
+
+@media (max-width: 600px) {
+    main, footer {
+    margin: 0 20px;
+    min-width: 0;
+    }
+}
